@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dragger</title>
+    <style>
+        img {
+            padding: 0;
+            width: 1120px;
+        }
+    </style>
+</head>
+<body class="jumbotron" style="padding: 0">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background: #b8b8b8; height: 60px">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color: #115a92"><span>DRAGGER</span></a>
+            <a href="{% url 'userdashboard' %}" class="btn btn-outline-primary" style="float: right; margin-left: 1100px;color: #10437b;
+    border-color: #003a78;">Dashboard</a>
+        </div>
+    </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+        <div class="container">
+        <div class="row" style="margin-top: 5%;  ">
+
+            <div class="col-sm-12 alert alert-success" role="alert" style="color: #46654d;
+    background-color: #cee3d3;
+    border-color: #e1e6e2;">
+                 <h4 style="font-size: 20px;
+    text-align: center;
+    margin: 0;">
+                     Select Template to continue ....</h4>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top: 5%">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                <div class="card" style="width: 250px;margin-left: 40px">
+                  <img class="card-img-top" src="{% static 'blank.jpg' %}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title" style="padding-left: 30px">Blank Template</h5>
+                      <a href="{% url 'edit' %}" class="btn form-control btn-outline-success">Go To Editor</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Preview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="{% static 'modal.jpg' %}" alt="not found" >
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'edit' %}"><button type="button" class="btn btn-secondary">Go to Editor</button></a>
+            </div>
+    </div>
+  </div>
+</div>
+
+{#    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>#}
+    <script src="https://cdn.jsde elivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

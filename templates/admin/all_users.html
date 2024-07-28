@@ -1,0 +1,98 @@
+
+{% extends 'admin/admin_main.html' %}
+ {% block content %}
+
+
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">All Users</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <div class="row">
+
+            <div class="col-sm-12">
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                            <div class="table100-head">
+                                <table>
+                                    <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">ID</th>
+                                        <th class="cell100 column2">Name</th>
+                                        <th class="cell100 column3">Email</th>
+                                        <th class="cell100 column4">Username</th>
+                                        <th class="cell100 column5">Actions</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <div class="table100-body js-pscroll">
+                                <table>
+                                    <tbody>
+
+                                            {% for user in users %}
+                                               <tr class="row100 body">
+                                                <td class="cell100 column1">{{ user.id }}</td>
+                                                <td class="cell100 column2">{{ user.first_name }}</td>
+                                                <td class="cell100 column3">{{ user.email }}</td>
+                                                <td class="cell100 column4">{{ user.username }}</td>
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+                                            </tr>
+                                            {% endfor %}
+{#                                            <tr class="row100 body">#}
+{#                                                <td class="cell100 column1">2</td>#}
+{#                                                <td class="cell100 column2">Maaz</td>#}
+{#                                                <td class="cell100 column3">maaz@gmail.com</td>#}
+{#                                                <td class="cell100 column4">maaz02</td>#}
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+{#                                            </tr>#}
+{#                                            <tr class="row100 body">#}
+{#                                                <td class="cell100 column1">3</td>#}
+{#                                                <td class="cell100 column2">Amna</td>#}
+{#                                                <td class="cell100 column3">amna@gmail.com</td>#}
+{#                                                <td class="cell100 column4">amna21</td>#}
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+{#                                            </tr>#}
+{#                                            <tr class="row100 body">#}
+{#                                                <td class="cell100 column1">4</td>#}
+{#                                                <td class="cell100 column2">Talha</td>#}
+{#                                                <td class="cell100 column3">talha@gmail.com</td>#}
+{#                                                <td class="cell100 column4">talha44</td>#}
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+{#                                            </tr>#}
+{#                                            <tr class="row100 body">#}
+{#                                                <td class="cell100 column1">5</td>#}
+{#                                                <td class="cell100 column2">Ali Ahmed</td>#}
+{#                                                <td class="cell100 column3">ali@gmail.com</td>#}
+{#                                                <td class="cell100 column4">ali_11</td>#}
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+{#                                            </tr>#}
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+
+
+    <script>
+        $(document).ready(function (){
+            $("#all_users").addClass("active")
+        })
+    </script>
+
+   {% endblock %}

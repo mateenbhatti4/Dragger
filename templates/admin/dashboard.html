@@ -1,0 +1,84 @@
+{% extends 'admin/admin_main.html' %}
+ {% block content %}
+
+
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Dashboard</li>
+			</ol>
+		</div><!--/.row-->
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Details
+						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+					<div class="panel-body">
+
+
+                        <div class="main-part">
+                            <div class="cpanel">
+                                <div class="icon-part">
+                                    <i class="fa fa-users" aria-hidden="true"></i><br>
+                                    <small>All Users</small>
+                                    <p style="color: white">{{ users }}</p>
+                                </div>
+                                <div class="card-content-part">
+                                    <a href="{% url 'all_users' %}">More Details </a>
+                                </div>
+                            </div>
+{#                            <div class="cpanel cpanel-green">#}
+{#                                <div class="icon-part">#}
+{#                                    <i class="fas fa-file"></i><br>#}
+{#                                    <small>All Projects</small>#}
+{#                                    <p style="color: white">12</p>#}
+{#                                </div>#}
+{#                                <div class="card-content-part">#}
+{#                                    <a href="{% url 'all_projects' %}">More Details </a>#}
+{#                                </div>#}
+{#                            </div>#}
+                            <div class="cpanel cpanel-orange">
+                                <div class="icon-part">
+                                    <i class="fas fa-credit-card"></i><br>
+                                    <small>All payments</small>
+                                    <p style="color: white">{{ payments }}</p>
+
+                                </div>
+                                <div class="card-content-part">
+                                    <a href="{% url 'all_payment' %}">More Details </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+					</div>
+					<div class="panel-footer">
+						<div class="input-group">
+
+                        </div>
+					</div>
+				</div>
+			</div><!--/.col-->
+
+
+
+		</div><!--/.row-->
+
+        <script>
+            $(document).ready(function (){
+                $("#admin_dashboard").addClass("active")
+            })
+        </script>
+
+   {% endblock %}

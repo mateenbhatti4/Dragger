@@ -1,0 +1,156 @@
+
+{% extends 'user/user_main.html' %}
+{% block content %}
+    {% load static %}
+    <div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Dashboard</li>
+			</ol>
+		</div><!--/.row-->
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Dashboard</h1>
+			</div>
+		</div><!--/.row-->
+
+
+        <div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Details
+						<a href="/editor/"><span class="pull-right clickable panel-button-tab-left"><button class="btn btn-primary"> Create new website </button></span></a></div>
+					<div class="panel-body" style="padding-top: 4%; padding-bottom: 4%">
+                            <div class="row container m-5">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 230px">
+                                      <img src="{% static 'website.jpg' %}" class="card-img-top" alt="not found">
+                                      <div class="card-body" style="padding-top: 20px">
+                                        <h5 class="card-title lead" style="padding-left: 4%; padding-right: 2%;">Shipping<small class="lead" style="font-size: small; float: right">21-nov-2021</small></h5>
+                                        <h3><a href="#"><i class='bx bx-dots-horizontal-rounded' style="margin-left: 200px"></i></a></h3>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 230px">
+                                      <img src="{% static 'website2.jpg' %}" class="card-img-top" alt="not found">
+                                      <div class="card-body" style="padding-top: 20px">
+                                        <h5 class="card-title lead" style="padding-left: 4%; padding-right: 2%;">Mobiles<small class="lead" style="font-size: small; float: right">2-dec-2021</small></h5>
+                                        <h3><a href="#"><i class='bx bx-dots-horizontal-rounded' style="margin-left: 200px"></i></a></h3>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 230px">
+                                      <img src="{% static 'website3.jpg' %}" class="card-img-top" alt="not found">
+                                      <div class="card-body" style="padding-top: 20px">
+                                        <h5 class="card-title lead" style="padding-left: 4%; padding-right: 2%;">Porfolio<small class="lead" style="font-size: small; float: right">10-jan-2022</small></h5>
+                                        <h3><a href="#"><i class='bx bx-dots-horizontal-rounded' style="margin-left: 200px"></i></a></h3>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                            </div>
+					</div>
+				</div>
+			</div>
+
+		</div><!--/.row-->
+    <div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Plan Details
+						<a href="/editor/"><span class="pull-right clickable panel-button-tab-left"></span></a></div>
+					<div class="panel-body" style="padding-top: 4%; padding-bottom: 4%">
+
+                        <div class="col-md-12" ></div>
+
+                    <div class="col-md-12" >
+                        <div class="dashboard-card">
+                            <h2 style="text-align: center">{{ plan.current_plan }}</h2>
+                            <ul class="details" style="margin-top: 40px;text-align: center" >
+                                <p>Per month billing</p>
+					            <p class="price"><span>${{ plan.price }}</span>/ Month</p>
+                                {% if plan.current_plan == "free" %}
+                         					                       <li style="color: lightskyblue"><em class="fa fa-check"></em> Buttons features</li>
+                                <li style="color: lightskyblue"><em class="fa fa-check"></em> Textual features</li>
+                                <li style="color: lightskyblue"><em class="fa fa-check"></em> Basics forms</li>
+                                <li style="color: lightskyblue"><em class="fa fa-check"></em> Social icons</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Form Styling</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Navbar Advance Styling</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Footer Advance Styling</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Login templates</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Signup templates</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Contact us templates</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Signup templates</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Images Uploading</li>
+                                <li style="color: lightcoral"><em class="fa fa-close"></em> Card Styling</li>
+                                {% elif plan.current_plan == "standard" %}
+                     <li style="color: lightskyblue"><em class="fa fa-check"></em> Buttons features</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Textual features</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Basics forms</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Social icons</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Form Styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Navbar Advance Styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Footer Advance Styling</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Login templates</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Signup templates</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Contact us templates</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Signup templates</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Images Uploading</li>
+                                    <li style="color: lightcoral"><em class="fa fa-close"></em> Card Styling</li>
+                                    {% elif plan.current_plan == "premium" %}
+                  				 <li style="color: lightskyblue"><em class="fa fa-check"></em> Buttons styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Textual styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Basics forms</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Social icons</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Form Styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Navbar Advance Styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Footer Advance Styling</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Login templates</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Signup templates</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Contact us templates</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Signup templates</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Images Uploading</li>
+                                    <li style="color: lightskyblue"><em class="fa fa-check"></em> Card Styling</li>
+                                    {% endif %}
+
+
+                            </ul>
+                            <div class="col-sm-12" style="text-align: center;    width: 67%;">
+                            <button class="btn  btn-primary  form-control" style="text-align: center;width: 300px" data-toggle="modal" data-target=".bd-example-modal-lg">Upgrade plan</button>
+                            </div>
+                            </div>
+                    </div>
+
+{#                    <div class="col-md-3">#}
+{#                        <div class="dashboard-card ">#}
+{#                            <h2>Total projects</h2>#}
+{#                            <p style="text-align: center">Designed projects</p>#}
+{#                            <p class="count" style="margin-bottom: -24px"><span>3</span></p>#}
+{#                            <ul class="details" style="">#}
+{#                            </ul>#}
+{#                            <button class="btn btn-primary btn-mid" data-toggle="modal" data-target=".bd-example-modal-lg">Design more</button>#}
+{#				        </div>#}
+{#                    </div>#}
+
+                        <div class="col-md-2" ></div>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div><!--/.row-->
+        <script>
+            $(document).ready(function (){
+                $("#user_dashboard").addClass("active")
+            })
+        </script>
+{% endblock %}

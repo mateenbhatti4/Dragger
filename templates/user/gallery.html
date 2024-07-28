@@ -1,0 +1,125 @@
+{#{% extends 'user/user_main.html' %}#}
+{#{% block content %}#}
+{##}
+{##}
+{#     <div class="row">#}
+{#        <ol class="breadcrumb">#}
+{#            <li><a href="#">#}
+{#                    <em class="fa fa-home"></em>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li class="active">Gallery</li>#}
+{#        </ol>#}
+{#    </div><!--/.row-->#}
+{#    <div class="file_manager">#}
+{#            <div class="container">#}
+{#                <div class="row" style="margin-top: 5%">#}
+{#                    <div class="col-sm-2"></div>#}
+{#                    <div class="col-sm-3">#}
+{#                        <div class="card" style="width: 230px">#}
+{#                            <div class="file">#}
+{#                                    <div class="hover">#}
+{#                                        <button type="button" class="btn btn-icon btn-danger" onclick="alert('Delete press')">#}
+{#                                            <i class="fa fa-trash"></i>#}
+{#                                        </button>#}
+{#                                    </div>#}
+{#                                    <div class="icon">#}
+{#                                        <i class="fa fa-file text-info"></i>#}
+{#                                    </div>#}
+{#                                    <div class="file-name">#}
+{#                                        <button style="background: #ffffff;outline: none; border: none;margin-bottom: 3%;" id="add-folders" class="m-b-5 text-muted">Cars & Bikes</button>#}
+{#                                        <small>Size: 12MB <span class="date text-muted">Nov 02, 2021</span></small>#}
+{#                                    </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-7">#}
+{#                        <div id="fields">#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>#}
+{#    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>#}
+{#    <script>#}
+{#        var x=1;#}
+{#        $('body').on('click', '#add-folders', function (){#}
+{#           var html='<div class="file-manager-container file-manager-col-view showhtml showcss">' +#}
+{#               '<div class="file-item" id="div">'+#}
+{#                  '<div class="file-item-select-bg bg-primary"></div>'+#}
+{#                    '<div class="file-item-icon far fa-folder text-secondary"></div>'+#}
+{#                     '<button style="background: #ffffff;outline: none; border: none;" id= "html" class="file-item-name">Html </button>'+#}
+{#                     '<div class="file-item-changed">02/13/2018</div></div>' +#}
+{#               '<div class="file-item" id="div">' +#}
+{#               '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#               '<div class="file-item-icon far fa-folder text-secondary"></div>' +#}
+{#               '<button style="background: #ffffff;outline: none; border: none;" id= "css" class="file-item-name">Css</button>' +#}
+{#               '<div class="file-item-changed">02/13/2018</div></div>' +#}
+{#               '<div id="showcss"></div>' +#}
+{#               '</div>';#}
+{#            $("#fields").append(html);#}
+{#        });#}
+{#        $('body').on('click','#html', function (){#}
+{#            var html = '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-html5 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">index.html</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#            '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-html5 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">contact.html</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#            '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-html5 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">about.html</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#                '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-html5 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">innovation.html</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>';#}
+{#            $(".showhtml").append(html)#}
+            {#alert('html')#}
+{#        });#}
+{#        $('body').on('click','#css', function (){#}
+{#            var html = '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-css3 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">style.css</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#                '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-css3 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">about.css</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#                '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-css3 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">contact.css</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>'+#}
+{#                '<div class="file-item">' +#}
+{#                '<div class="file-item-select-bg bg-primary"></div>' +#}
+{#                '<div class="file-item-icon fab fa-css3 text-secondary"></div>' +#}
+{#                '<a href="#" class="file-item-name">innovation.css</a>' +#}
+{#                '<div class="file-item-changed">02/19/2018</div></div>';#}
+{#            $(".showcss").append(html)#}
+            {#alert('html')#}
+{#        });#}
+{#    </script>#}
+{#    <script>#}
+{#            $(document).ready(function (){#}
+{#                $("#files").addClass("active")#}
+{#            });#}
+{#    </script>#}
+{#{% endblock %}#}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
+{##}

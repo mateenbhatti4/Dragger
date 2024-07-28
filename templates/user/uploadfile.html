@@ -1,0 +1,159 @@
+{#{% extends 'layout/_base.html' %}#}
+{#{% extends 'user/user_main.html' %}#}
+{#{% block content %}#}
+{##}
+{##}
+{#		<div class="row">#}
+{#			<ol class="breadcrumb">#}
+{#				<li><a href="#">#}
+{#					<em class="fa fa-home"></em>#}
+{#				</a></li>#}
+{#				<li class="active">Upload Project</li>#}
+{#			</ol>#}
+{#		</div><!--/.row-->#}
+{##}
+{#		<div class="row">#}
+{#			<div class="col-lg-12">#}
+{#				<h1 class="page-header">Upload Project</h1>#}
+{#			</div>#}
+{#		</div><!--/.row-->#}
+{##}
+{##}
+{#		<div class="row">#}
+{#			<div class="col-md-12">#}
+{#				<div class="panel panel-default">#}
+{#					<div class="panel-heading">#}
+{#						File#}
+{#						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>#}
+{#					<div class="panel-body" style="padding-bottom: 5%; padding-top: 5%">#}
+{#                        <div class="row">#}
+{#                            <div class="col-sm-3"></div>#}
+{#                            <div class="col-sm-3">#}
+{#                                <div class="dashboard-card">#}
+{#                                    <h2>Upload Project</h2>#}
+{#                                    <p style="text-align: center">Zip file</p>#}
+{#                                    <ul class="details" style="margin-top: 40px">#}
+{#                                        <li>Must have zip file</li>#}
+{#                                        <li>Memory less than your plan</li>#}
+{#                                        <li>files in proper folder</li>#}
+{#                                    </ul>#}
+{#                                    <button class="btn btn-primary btn-mid" data-toggle="modal" data-target="#exampleModalCenter">Upload</button>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="col-sm-3"></div>#}
+{#                            <div class="col-sm-3"></div>#}
+{#                        </div>#}
+{##}
+{#					</div>#}
+{##}
+{#				</div>#}
+{#			</div><!--/.col-->#}
+{##}
+{##}
+{##}
+{#		</div><!--/.row-->#}
+{##}
+{##}
+{#    <a class="btn " id="signin_button" data-toggle="modal" data-target="#modalRegisterForm"  style="float: right"><i class="fas fa-user-plus"></i></a>#}
+{#<a class="btn " id="login_button" data-toggle="modal" data-target="#modalLoginForm"  style="float: right"><i class="fas fa-sign-in-alt"></i></a>#}
+{#{{--    login modal--}}#}
+{#<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"#}
+{#     aria-hidden="true">#}
+{#    <div class="modal-dialog" role="document">#}
+{#        <div class="modal-content">#}
+{#            <div class="modal-header text-center">#}
+{#                    <h4 class="modal-title w-100 font-weight-bold">Log in</h4>#}
+{#                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                    <span aria-hidden="true">&times;</span>#}
+{#                </button>#}
+{#            </div>#}
+{#            <div class="modal-body mx-3" style="margin-top: 50px;margin-bottom: 30px ">#}
+{#                <div class="alert alert-success" id="login_error" role="alert">#}
+{#                    Everything is good to go!#}
+{#                </div>#}
+{#                <div class="md-form mb-3 ">#}
+{#{{--                    <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>--}}#}
+{#                    <input type="email" a id="login-email" style="height: 50px" placeholder="Your email" class="form-control login_inputs validate">#}
+{#                </div>#}
+{##}
+{#                <div class="md-form mb-4">#}
+{#{{--                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>--}}#}
+{#                    <input type="password" id="login-pass" style="height: 50px" placeholder="Your password" class="form-control login_inputs validate">#}
+{#                </div>#}
+{#                <span  style="font-size: 10px;color: grey;padding-left: 5px">Does not have account? <span id="switch_to_signup" style="font-size: 8px ;color: blue" > SignUp </span></span>#}
+{##}
+{#            </div>#}
+{#            <div class="modal-footer d-flex justify-content-center">#}
+{#                <button class="btn btn-default user_actions" id="login">Login</button>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#{{--    signup modal--}}#}
+{#<!-- Modal -->#}
+{#<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"#}
+{#     aria-hidden="true">#}
+{#    <div class="modal-dialog" role="document">#}
+{#        <div class="modal-content">#}
+{#            <div class="modal-header text-center">#}
+{#                <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>#}
+{#                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                    <span aria-hidden="true">&times;</span>#}
+{#                </button>#}
+{#            </div>#}
+{#                <div class="modal-body mx-3" style="margin-top: 50px;margin-bottom: 30px ">#}
+{#                    <div class="alert alert-success" id="sigup_error" role="alert">#}
+{#                        Everything is good to go!#}
+{#                    </div>#}
+{##}
+{#                    <div class="md-form mb-3 ">#}
+{#                        <input type="text" value="" required id="signup-name" style="height: 50px" placeholder="Your name" class="form-control validate signin_inputs">#}
+{#                    </div>#}
+{##}
+{#                    <div class="md-form mb-3 ">#}
+{#                        <input type="email" value="" required id="signup-email" style="height: 50px" placeholder="Your email" class="form-control validate signin_inputs">#}
+{#                    </div>#}
+{##}
+{#                    <div class="md-form mb-3 ">#}
+{#                        <input type="password" value="" required id="signup-pass" style="height: 50px" placeholder="Your password" class="form-control validate signin_inputs">#}
+{#                    </div>#}
+{##}
+{#                    <div class="md-form mb-4">#}
+{#                        <input type="password" value="" required id="signup-cpass" style="height: 50px" placeholder="Confirm password" class="form-control validate signin_inputs">#}
+{#                    </div>#}
+{#                    <span  style="font-size: 10px;color: grey;padding-left: 5px">Already have account? <span id="switch_to_login" style="font-size: 8px ;color: blue" > Login </span></span>#}
+{##}
+{##}
+{#                </div>#}
+{#            <div class="modal-footer d-flex justify-content-center">#}
+{#                <button class="btn btn-deep-orange user_actions" id="signin" >Sign up</button>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#    <!-- Modal -->#}
+{#    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">#}
+{#        <div class="modal-dialog modal-dialog-centered" role="document">#}
+{#            <div class="modal-content">#}
+{#                <div class="modal-header">#}
+{#                    <h4 class="modal-title" id="exampleModalLongTitle">Upload Files <small style="color: red">*(File must have less than 100MB)</small></h4>#}
+{#                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+{#                      <span aria-hidden="true">&times;</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{#                  <div class="modal-body">#}
+{#                    <input type="file">#}
+{#                  </div>#}
+{#                  < div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-primary">Upload</button>#}
+{#                  </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <script>#}
+{#            $(document).ready(function (){#}
+{#                $("#upload_project").addClass("active")#}
+{#            })#}
+{#        </script>#}
+{#{% endblock %}#}

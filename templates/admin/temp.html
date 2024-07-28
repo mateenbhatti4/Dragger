@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="{% static 'style.css' %}" rel="stylesheet"  type="text/css"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="{% static 'main.js' %}"></script>
+    <script src="https://kit.fontawesome.com/1d9d92b2fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div class="row">
+        <div class="col-2" id="back" style="padding-top: 1%">
+            <ul class="list-unstyled components mb-5">
+                <li class="active pb-2 list-unstyled text-center">
+                  <a href="#text" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Text</b></a>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="text">
+                          <hr>
+                            <li>
+                                <a href="#" id="heading">Headings</a>
+                            </li><br>
+                            <li>
+                                <a href="#">Paragraph</a>
+                            </li>
+                      </ul>
+                  </div>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                  <hr>
+                    <a href="#buttons" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Button</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="buttons">
+                            <li>
+                                <a href="#">Radio Button</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="#">Text Button</a>
+                            </li><br>
+                          <hr>
+                      </ul>
+                    </div>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#inputField" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Input Fields</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="inputField">
+                            <li>
+                                <a href="#" draggable="true" >Form control</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="#">File</a>
+                            </li>
+                          <br>
+
+                          <hr>
+                      </ul>
+                    </div>
+
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Nav Bars</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Footer</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Image</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Image Slider</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Cards</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Table</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#models" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Mddels</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="models">
+                            <li>
+                                <a href="#">Small</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="#">Large</a>
+                            </li><br>
+                            <li>
+                                <a href="#">Extra Large</a>
+                            </li><br>
+
+                          <hr>
+                      </ul>
+                    </div>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Social Icons</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Dropdown</b></a>
+                    <hr>
+                </li>
+                <li class="active pb-2 list-unstyled text-center">
+                    <a href="#" aria-expanded="false"><b>Search Box</b></a>
+                    <hr>
+                </li>
+
+                <li class="active pb-2 list-unstyled text-center" id="new">
+                    <a href="#" aria-expanded="false"><b>List</b></a>
+                    <hr>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="col-8" id="drop">
+            <h1>
+                Content Here ...<i class="fas fa-car" style="font-size: 30px"></i>
+                <button class="btn btn-danger" id="btn1">left</button>
+                <button class="btn btn-danger" id="btn2">right</button>
+            </h1>
+                  <button id="showLeft" class="btn btn-primary">toggle</button>
+            <div id="draggable" class="ui-widget-content">
+                 <p>Drag me to my target</p>
+            </div>
+
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+</div>
+
+        </div>
+
+        <div class="col-2" id="back">
+            <ul class="list-unstyled components mb-5">
+                <li class="active pb-2 mt-3 list-unstyled">
+                  <a href="#idClassSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Class, ID</b></a>
+
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="idClassSubmenu">
+                            <li>
+                                <input type="text" placeholder="ID" style="background: #999999; height: 35px; width: 135px;" class="form-control mb-2 mt-2">
+                            </li>
+                            <li>
+                                <input type="text" placeholder="Class" style="background: #999999; height: 35px; width: 135px;" class="form-control">
+                            </li>
+                      </ul>
+                  </div>
+	          </li>
+	          <li class="active pb-2 list-unstyled">
+                  <hr>
+                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Layout</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Display</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-bars spaces" data-toggle="tooltip" title="in-line" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-bars spaces" data-toggle="tooltip" title="in-line block" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-bars spaces" data-toggle="tooltip" title="block" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Float</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-align-left spaces" data-toggle="tooltip" title="Float left" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-right spaces" data-toggle="tooltip" title="Float Right" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Clear</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-align-left spaces" data-toggle="tooltip" title="Clear left" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-right spaces" data-toggle="tooltip" title="Clear Right" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-justify spaces" data-toggle="tooltip" title="Clear Both" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Align</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-align-left spaces" data-toggle="tooltip" title="Align left" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-right spaces" data-toggle="tooltip" title="Align Right" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-center spaces" data-toggle="tooltip" title="Align Center" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                          <hr>
+                      </ul>
+                  </div>
+
+	          </li>
+	          <li class="active pb-2 list-unstyled">
+                  <a href="#spaceSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Spaces</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="spaceSubmenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-12 mb-2" style="text-align: center">
+                                        <a href="#">Margin</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Top</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Right</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Bottom</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Left</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-12 mb-2" style="text-align: center">
+                                        <a href="#">Padding</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Top</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Right</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Bottom</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Left</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                            </li>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#sizingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Sizing</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="sizingSubmenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Width</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Height</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Min.W</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Min.H</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Max.W</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Max.H</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                            </li>
+                          <li>
+                                <div style="display: flex">
+                                    <a href="#" style="font-size: medium; margin:5%;">Overflow</a>
+                                      <div class="input-group">
+                                          <select class="custom-select" id="inputGroupSelect04" style="background: #bbbbbb; border: none;outline: none; height: 30px;font-size: small">
+                                              <option selected>Visible</option>
+                                              <option value="1">Hidden</option>
+                                              <option value="2">Scroll</option>
+                                              <option value="3">Auto</option>
+                                          </select>
+                                      </div>
+                                </div>
+                          </li>
+                          <li>
+                                <div style="display: flex">
+                                    <a href="#" style="font-size: medium; margin:5%;">Image</a>
+                                      <div class="input-group">
+                                          <select class="custom-select" id="inputGroupSelect04" style="background: #bbbbbb; border: none;outline: none; height: 30px;font-size: small">
+                                              <option selected>Fill</option>
+                                              <option value="1">Contain</option>
+                                              <option value="2">Cover</option>
+                                              <option value="3">ScaleDown</option>
+                                              <option value="3">None</option>
+                                          </select>
+                                      </div>
+                                </div>
+                          </li>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#positionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Position</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="positionSubmenu">
+                          <div class="input-group">
+                              <select class="custom-select" id="inputGroupSelect04" style="background: #bbbbbb; border: none;outline: none; font-size: medium">
+                                  <option selected>Sticky</option>
+                                  <option value="1">Fixed</option>
+                                  <option value="2">Absolute</option>
+                                  <option value="3">Relative</option>
+                                  <option value="3">Static</option>
+                              </select>
+                          </div>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#shadowSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Shadow</b></a>
+                  <hr>
+                  <div>
+                      <ul class="collapse list-unstyled" id="shadowSubmenu">
+                            <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Shadow</label>
+                            <input type="range" class="form-range" min="0" max="100" id="customRange2" style="color: #323131; background: #bdbcbc">
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#textSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Text</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="textSubmenu">
+                            <li>
+                                <div style="display: flex">
+                                    <a href="#" style="font-size: medium; margin-right: 8%;">Font</a>
+                                      <div class="input-group">
+                                          <select class="custom-select" id="inputGroupSelect04" style="background: #bbbbbb; border: none;outline: none; height: 30px; margin-bottom: 7%;font-size: small">
+                                              <option selected><p style="font-family: Arial;">Arail</p></option>
+                                              <option ><p style="font-family: sans-serif;">Sans-serif</p></option>
+                                              <option ><p style="font-family: Tahoma;">Tahoma</p></option>
+                                              <option ><p style="font-family: 'Times New Roman';">Times New Roman</p></option>
+                                              <option ><p style="font-family: Georgia;">Georgia</p></option>
+                                          </select>
+                                      </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Size</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Height</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                            </li>
+                          <li>
+                                <div style="display: flex">
+                                    <a href="#" style="margin-right: 5%">Weight</a>
+                                    <div class="input-group">
+                                          <select class="custom-select" id="inputGroupSelect04" style="background: #bbbbbb; border: none;outline: none; height: 30px; margin-bottom: 7%; font-size: small">
+                                              <option selected>Thin</option>
+                                              <option>Light</option>
+                                              <option>Extra Light</option>
+                                              <option>Normal</option>
+                                              <option>Medium</option>
+                                              <option>Bold</option>
+                                              <option>Extra Bold</option>
+                                          </select>
+                                    </div>
+                                </div>
+                          </li>
+                          <li>
+                                <a href="#">Color</a>
+                                <input type="color" id="colorPicker" class="color-picker" style="margin-top: 5%">
+                          </li>
+                          <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Align</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-align-left spaces" data-toggle="tooltip" title="Align left" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-right spaces" data-toggle="tooltip" title="Align Right" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-center spaces" data-toggle="tooltip" title="Align Center" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-align-justify spaces" data-toggle="tooltip" title="Align Justify" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                          </li>
+                          <li>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Style</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-italic spaces" data-toggle="tooltip" title="Italic" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-underline spaces" data-toggle="tooltip" title="Underline" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-times spaces" data-toggle="tooltip" title="None" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-strikethrough spaces" data-toggle="tooltip" title="Strikethrough" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                          </li>
+                          <li>
+                              <div class="row">
+                                  <div class="col-12" style="text-align: center; margin-top: 4%; margin-bottom: 2%">
+                                      <a href="#">Text Shadow</a>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Angle</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Distance</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Blur</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                              </div>
+                              <a href="#">Color</a>
+                              <input type="color" id="colorPicker" class="color-picker" style="margin-top: 0">
+                          </li>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#backgroundSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Background</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="backgroundSubmenu">
+                            <li>
+                                <div class="row" style="text-align: center">
+                                    <div class="col-12">
+                                        <p style="font-size: 15px">Image</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Size</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn customization" style="font-size: 10px; height: 25px; width: 50px; padding: 0">Custom</button>
+                                    </div>
+                                    <div class="col-3">
+                                        <button class="btn customization" style="font-size: 10px; height: 25px; width: 50px; padding: 0">Cover</button>
+                                    </div>
+                                    <div class="col-2">
+                                        <button class="btn customization" style="font-size: 10px; height: 25px; width: 50px; padding: 0">Contain</button>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5%">
+                                    <div class="col-2 mr-3" >
+                                        <p>Width</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Height</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center">
+                                        <p>Position</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Left</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Top</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="#">Tile</a>
+                                    </div>
+                                    <div class="col-7">
+                                        <div style="color: #bfbfbf; display: inline" class="spaces">
+                                            <a href="#" ><i class="fa fa-square spaces" data-toggle="tooltip" title="Horizontal and vertical" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-ellipsis-h spaces" data-toggle="tooltip" title="Horizontal" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-ellipsis-v spaces" data-toggle="tooltip" title="Vertical" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-times spaces" data-toggle="tooltip" title="None" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center; margin-top: 5%">
+                                        <p>Fixed</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p>Type</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <button class="btn customization" style="font-size: 12px; padding: 0">Fixed</button>
+                                        <button class="btn customization" style="font-size: 12px; padding: 0">N.fixed</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center; font-size: 15px">
+                                        <p>Liner Gradient</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Angle</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">color</a>
+                                <input type="color" class="color-picker">
+                            </li>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#borderSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Border</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="borderSubmenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center">
+                                        <a href="#">Radius</a>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 4%">
+                                    <div class="col-4">
+                                        <div style="display: flex">
+                                            <a href="#" ><i class="fa fa-square-o spaces" data-toggle="tooltip" title="All corners" aria-hidden="true" style="align-items: center;justify-content: center;display: flex; height: 18px; width: 18px"></i></a>
+                                            <svg style="align-items: center;justify-content: center;display: flex; color: #bbbbbb; margin-left: 10%" data-icon="BorderRadiusMultiple" aria-hidden="true" data-toggle="tooltip" title="Custom corners" focusable="false" width="18" height="18" viewBox="0 0 16 16" class="bem-Svg" style="display: block;"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 2a3 3 0 00-3 3v2h2V5a1 1 0 011-1h2V2H5zm6 0a3 3 0 013 3v2h-2V5a1 1 0 00-1-1H9V2h2zM5 14a3 3 0 01-3-3V9h2v2a1 1 0 001 1h2v2H5zm6 0a3 3 0 003-3V9h-2v2a1 1 0 01-1 1H9v2h2z" fill="currentColor"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <input type="range" class="form-range" min="0" max="30" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5%">
+                                    <div class="col-2 mr-3">
+                                        <p>Top</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Right</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Bottom</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Left</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center">
+                                        <a href="#">Border</a>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5%">
+                                    <div class="col-2 mr-3">
+                                        <p>Top</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Right</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Bottom</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Left</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p>Style</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <a href="#" ><i class="fa fa-times spaces" data-toggle="tooltip" title="None" aria-hidden="true"></i></a>
+                                        <a href="#" ><i class="fa fa-minus spaces" data-toggle="tooltip" title="Solid" aria-hidden="true"></i></a>
+                                        <a href="#" ><i class="fa fa-ellipsis-h spaces" data-toggle="tooltip" title="Dotted" aria-hidden="true"></i></a>
+                                        <a href="#" ><i class="fa fa-ellipsis-h spaces" data-toggle="tooltip" title="Dashed" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 mr-3">
+                                        <p>Width</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input placeholder="Px" class="margin-case">
+                                    </div>
+                                    <div class="col-2 mr-3">
+                                        <p>Color</p>
+                                    </div>
+                                    <div class="col-3">
+                                         <input type="color" class="color-picker">
+                                    </div>
+                                </div>
+
+                            </li>
+                      </ul>
+                  </div>
+	          </li>
+                <li class="active pb-2 list-unstyled">
+                  <a href="#effectSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><b>Effects</b></a>
+                  <hr>
+                  <div class="spaces">
+                      <ul class="collapse list-unstyled" id="effectSubmenu">
+                            <li>
+                                <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Opacity</label>
+                                <input type="range" class="form-range" min="0" max="100" id="customRange2" style="color: #323131; background: #bdbcbc;">
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-12" style="text-align: center">
+                                        <a href="#">Box Shadow</a>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5%">
+                                    <div class="col-3">
+                                        <p>Type</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <button class="btn customization">Outside</button>
+                                        <button class="btn customization">Inside</button>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 5%">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Angle</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Distance</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Blur</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-3">
+                                      <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Size</label>
+                                  </div>
+                                  <div class="col-8">
+                                    <input type="range" class="form-range" min="0" max="360" value="0" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                  </div>
+                                </div>
+                                <a href="#">Color</a>
+                                <input type="color" id="colorPicker" class="color-picker" style="margin-top: 0">
+                            </li>
+                          <li>
+                              <div class="row" style="text-align: center; font-size: 15px; margin-top: 5%">
+                                  <div class="col-12">
+                                      <p>2D & 3D Transform</p>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12">
+                                      <ul class="nav nav-pills" id="pills-tab" role="tablist" style="flex-wrap: nowrap;">
+                                        <li class="nav-item" style="font-size: small;">
+                                            <a class="nav-link active" id="pills-move-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" style="padding: 5px">Move</a>
+                                        </li>
+                                          <li class="nav-item" style="font-size: small;">
+                                            <a class="nav-link" id="pills-scale-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false" style="padding: 5px">Scale</a>
+                                          </li>
+                                          <li class="nav-item" style="font-size: small;">
+                                            <a class="nav-link" id="pills-rotate-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false" style="padding: 5px">Rotate</a>
+                                          </li>
+                                          <li class="nav-item" style="font-size: small;">
+                                            <a class="nav-link" id="pills-skew-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false" style="padding: 5px">Skew</a>
+                                          </li>
+                                    </ul>
+                                  </div>
+                              </div>
+                                <div class="tab-content" id="pills-tabContent">
+                                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-move-tab">
+                                      <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                      <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-scale-tab">
+                                        <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-rotate-tab">
+                                      <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                      <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-skew-tab">
+                                    <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                      <div class="row">
+                                          <div class="col-3">
+                                              <label for="customRange2" class="form-label" style="margin-right: 2px; color: #e2e2e2; font-size: small">Pixel</label>
+                                          </div>
+                                          <div class="col-8">
+                                            <input type="range" class="form-range" min="0" max="360" id="customRange2" style="color: #323131; background: #bdbcbc">
+                                          </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </li>
+                      </ul>
+                  </div>
+	          </li>
+	        </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

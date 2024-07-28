@@ -1,0 +1,190 @@
+{#@extends('admin.admin_main')#}
+{##}
+{#@section('admin-content')#}
+{##}
+{##}
+{#    <div class="row">#}
+{#        <ol class="breadcrumb">#}
+{#            <li><a href="#">#}
+{#                    <em class="fa fa-home"></em>#}
+{#                </a></li>#}
+{#            <li class="active">Manage Filters</li>#}
+{#        </ol>#}
+{#    </div><!--/.row-->#}
+{##}
+{#    <div class="row">#}
+{#        <div class="col-lg-12">#}
+{#            <h1 class="page-header">Manage Filters</h1>#}
+{#        </div>#}
+{#    </div><!--/.row-->#}
+{##}
+{#    <div class="row">#}
+{#        <div class="col-md-12">#}
+{#            <div class="panel panel-default">#}
+{#                <div class="panel-heading">#}
+{#                    Add Items#}
+{#                    <span class="pull-right clickable panel-toggle panel-button-tab-left"><em#}
+{#                                class="fa fa-toggle-up"></em></span></div>#}
+{#                <div class="panel-body" style="min-height: 390px;max-height: 390px">#}
+{#                    <div class="col-md-5" style="border-right: 2px black solid">#}
+{#                        <label class="col-sm-4" style="margin: 10px 0px 0px 40px">Select Option:</label>#}
+{#                        <select id="selected_filter" class=" btn btn-primary btn-lg col-sm-6" style="float: right">#}
+{#                            <option selected disabled>Choose...</option>#}
+{#                            <option value="ingredient">Hero Ingredient</option>#}
+{#                            <option value="type">Course Type</option>#}
+{#                            <option value="skill">Skill Level</option>#}
+{#                            <option value="learn">Want to Learn</option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                    <div class="col-md-7"#}
+{#                         style="min-height: 370px;max-height: 370px;overflow-y:scroll;padding-top: 7px ">#}
+{#                        <ul class="todo-list" id="filter_list">#}
+{#                            <li class="todo-list-item">#}
+{#                                <div class="checkbox">#}
+{#                                    <h4>Select Filter</h4>#}
+{#                                </div>#}
+{#                            </li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{##}
+{##}
+{#                </div>#}
+{#                <div class="panel-footer">#}
+{#                    <div class="col-md-5"></div>#}
+{#                    <div class="input-group col-md-7" style="padding-left: 15px">#}
+{#                        <input id="input_filter_name" type="text" class="form-control input-md"#}
+{#                               placeholder="Add new filter"/><span class="input-group-btn">#}
+{#								<button class="btn btn-primary btn-md" id="add_filter">Add</button>#}
+{#						</span></div>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#        </div><!--/.col-->#}
+{##}
+{#    </div>#}
+{##}
+{#    <script>#}
+{#      $(document).ready(function() {#}
+{#        $('#manage_filter').addClass('active');#}
+{#      });#}
+{##}
+{#      $('#selected_filter').change(function() {#}
+{##}
+{#        $.ajax({#}
+{#          type: 'POST',#}
+{#          url: '/apply_filter',#}
+{#          data: {#}
+{#            '_token': "{{ csrf_token() }}",#}
+{#            filter_name: $(this).val(),#}
+{#          },#}
+{#          success: function(data) {#}
+{#            console.log(data.length);#}
+{#            if (data.length > 0) {#}
+{#              html = '';#}
+{#              $('#filter_list').html('');#}
+{#              for (var i = 0; i < data.length; i++) {#}
+{#                var name = data[i]['name'];#}
+{#                var id = data[i]['id'];#}
+{#                html = '<li class="todo-list-item">' +#}
+{#                  '<div class="checkbox">' +#}
+{#                  '<label for="checkbox-3" id="filter_name_'+id+'">' + name + '</label>' +#}
+{#                  '<span id="' + id + '" style="display: none">' + id + '</span>' +#}
+{#                  '</div>' +#}
+{#                  '<div class="pull-right action-buttons"><button class="delete_filter" id="' + id + '">' +#}
+{#                  '<em class="fa fa-trash"></em>' +#}
+{#                  '</button></div>' +#}
+{#                  '</li>';#}
+{##}
+{#                $('#filter_list').append(html);#}
+{#              }#}
+{#            } else {#}
+{##}
+{#              html = '<li class="todo-list-item">' +#}
+{#                '<div class="checkbox" style="align-content: center">' +#}
+{#                '<h4 >No filter data</h4>' +#}
+{#                '</div>' +#}
+{#                '</div>' +#}
+{#                '</li>';#}
+{#              $('#filter_list').html(html);#}
+{#            }#}
+{#          },#}
+{#        });#}
+{##}
+{#      });#}
+{##}
+{#      $('#add_filter').click(function() {#}
+{##}
+{#        if ($('#selected_filter').val() && $('#input_filter_name').val()) {#}
+{##}
+{#          $.ajax({#}
+{#            type: 'POST',#}
+{#            url: '/add_filter',#}
+{#            data: {#}
+{#              '_token': "{{ csrf_token() }}",#}
+{#              filter_name: $('#selected_filter').val(),#}
+{#              filter_val: $('#input_filter_name').val(),#}
+{#            },#}
+{#            success: function(data) {#}
+{#              console.log(data);#}
+{##}
+{#              if (data) {#}
+{#                var html = '';#}
+{#                var name = data['name'];#}
+{#                var id = data['id'];#}
+{#                html = '<li class="todo-list-item">' +#}
+{#                  '<div class="checkbox">' +#}
+{#                  '<label for="checkbox-3">' + name + '</label>' +#}
+{#                  '<span id="' + id + '" style="display: none">' + id + '</span>' +#}
+{#                  '</div>' +#}
+{#                  '<div class="pull-right action-buttons"><button class="delete_filter" id="' + id + '">' +#}
+{#                  '<em class="fa fa-trash"></em>' +#}
+{#                  '</button></div>' +#}
+{#                  '</li>';#}
+{##}
+{#                $('#input_filter_name').val('');#}
+{#                $('#filter_list').append(html);#}
+{#              }#}
+{#            },#}
+{#          });#}
+{##}
+{#        } else {#}
+{#          console.log('no filter selected');#}
+{#        }#}
+{##}
+{#      });#}
+{##}
+{#      $('body').on('click', '.delete_filter', function() {#}
+{##}
+{#        console.log($(this).attr('id'));#}
+{#        var id="filter_name_"+$(this).attr('id');#}
+{##}
+{#        if ($('#selected_filter').val()) {#}
+{##}
+{#          $.ajax({#}
+{#            type: 'POST',#}
+{#            url: '/delete_filter',#}
+{#            data: {#}
+{#              '_token': "{{ csrf_token() }}",#}
+{#              filter_name: $('#selected_filter').val(),#}
+{#              filter_id: $(this).attr('id'),#}
+{#            },#}
+{##}
+{#            success: function(data) {#}
+{#              console.log(data);#}
+{#              if (data){#}
+{#                document.getElementById(id).style.textDecoration = "line-through";#}
+{#              }#}
+{##}
+{#            },#}
+{#          });#}
+{##}
+{#        } else {#}
+{#          console.log('no filter selected');#}
+{#        }#}
+{##}
+{#      });#}
+{##}
+{##}
+{#    </script>#}
+{##}
+{#@endsection#}

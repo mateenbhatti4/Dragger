@@ -1,0 +1,108 @@
+
+{% extends 'admin/admin_main.html' %}
+ {% block content %}
+
+
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">All Projects</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <div class="row">
+
+            <div class="col-sm-12">
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                            <div class="table100-head">
+                                <table>
+                                    <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">Username</th>
+                                        <th class="cell100 column2">Project Title</th>
+                                        <th class="cell100 column4">Total Project</th>
+                                        <th class="cell100 column5">Actions</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <div class="table100-body js-pscroll">
+                                <table>
+                                    <tbody>
+
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">ahmed_1</td>
+                                                <td class="cell100 column2">E-commerce</td>
+                                                <td class="cell100 column4">3</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">ahmed_1</td>
+                                                <td class="cell100 column2">Art</td>
+                                                <td class="cell100 column4">3</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">ahmed_1</td>
+                                                <td class="cell100 column2">Portfolio</td>
+                                                <td class="cell100 column4">3</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">maaz02</td>
+                                                <td class="cell100 column2">Technology</td>
+                                                <td class="cell100 column4">1</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">amna21</td>
+                                                <td class="cell100 column2">Portfolio</td>
+                                                <td class="cell100 column4">2</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">amna21</td>
+                                                <td class="cell100 column2">E-commerce</td>
+                                                <td class="cell100 column4">2</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">talha44</td>
+                                                <td class="cell100 column2">Art</td>
+                                                <td class="cell100 column4">1</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">ali_11</td>
+                                                <td class="cell100 column2">blog</td>
+                                                <td class="cell100 column4">1</td>
+                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>
+                                            </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+
+
+    <script>
+        $(document).ready(function (){
+            $("#all_projects").addClass("active")
+        })
+
+    </script>
+
+   {% endblock %}

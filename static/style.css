@@ -1,0 +1,134 @@
+
+.a1 {
+    background: #e7e5e5;
+    padding: 10px;
+}
+.a1 input{
+    background: #c5c5c5;
+    margin:10px;
+    padding: 10px;
+}
+.a1 button {
+    background: #c5c5c5;
+    margin:10px;
+    padding: 10px;
+}
+.table-shape{
+padding: 10px
+}
+.a2 {
+    background: #eae2e2;
+}
+#back {
+    background: whitesmoke;
+    text-decoration: none;
+    position: fixed;
+    /*width: 150px;*/
+    overflow-y: scroll;
+    top: 79px;
+    bottom: 0;
+    right: 0;
+    border-radius: 7px;
+    margin-right: 6px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+#back a{
+    color: #30a5ff;
+    font-weight: 200;
+    font-size: 16px;
+    font-family: system-ui;
+}
+#back p{
+    color: #e2e2e2;
+    font-size: small;
+}
+.spaces
+{
+    margin-left: 5%;
+}
+hr{
+    background: #bbbbbb;
+}
+.margin-case{
+    height: 25px;
+    width: 40px;
+    font-size: small;
+    background: #bbbbbb;
+    border: none;
+    outline: none;
+    border-radius: 7px 7px
+}
+.color-picker{
+    height: 25px;
+    width: 25px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+[type='color']::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+[type='color']::-webkit-color-swatch{
+    border: none;
+}
+.customization{
+    font-size: small;
+    background: #e7e5e5;
+    color: black;
+    height: 30px;
+    width: 70px;
+}
+.sidecontrol{
+    background: #1ebfae;
+
+}
+.animate-menu {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  transition: all 0.3s ease; }
+
+.animate-menu-left {
+  left: -200px; }
+.animate-menu-left.animate-menu-open {
+    left: 0; }
+.sectionLine:hover{
+    border-bottom: 4px solid #878787;
+}
+
+input[type="radio"]{
+    -webkit-appearance: none;
+}
+
+label{
+   height: 50px;
+   width: 110px;
+   border: 3px solid #aaaaaa;
+   margin: auto;
+   border-radius: 10px;
+   position: relative;
+   color: #aaaaaa;
+   transition: 0.5s;
+}
+
+/*.fa {*/
+/*    font-size: 80px;*/
+
+/*    transform: translate(-50%, -80%);*/
+/*}*/
+
+label>span {
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+input[type="radio"]:checked + label {
+	background-color: #aaaaaa;
+	color: #ffffff;
+	box-shadow: 0 15px 45px rgba(201, 201, 201, 0.2);
+}

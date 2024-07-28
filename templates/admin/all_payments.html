@@ -1,0 +1,71 @@
+
+{% extends 'admin/admin_main.html' %}
+ {% block content %}
+
+
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+            <li class="active">All Payments</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="panel panel-container">
+        <div class="row">
+
+            <div class="col-sm-12">
+            <div class="limiter">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                            <div class="table100-head">
+                                <table>
+                                    <thead>
+                                    <tr class="row100 head">
+                                        <th class="cell100 column1">User Id</th>
+                                        <th class="cell100 column2">Plan Name</th>
+                                        <th class="cell100 column4">Payment</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <div class="table100-body js-pscroll">
+                                <table>
+                                    <tbody>
+
+
+                                             {% for payment in payments %}
+
+                                                 <tr class="row100 body">
+                                                <td class="cell100 column1">{{ payment.user_id }}</td>
+                                                <td class="cell100 column2">{{ payment.current_plan }}</td>
+                                                <td class="cell100 column3">{{ payment.price }}</td>
+{#                                                <td class="cell100 column5"><button class="btn btn-primary">Edit</button><button class="btn btn-danger" style="margin-left: 3%">Delete</button></td>#}
+                                                     </tr>
+                                            {% endfor %}
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!--/.row-->
+    </div>
+
+
+    <script>
+        $(document).ready(function (){
+            $("#all_payment").addClass("active")
+        })
+
+    </script>
+
+   {% endblock %}

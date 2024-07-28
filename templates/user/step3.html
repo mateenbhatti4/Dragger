@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="{% static 'payments.css' %}" rel="stylesheet">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+
+    <title>Dragger</title>
+</head>
+<body class="jumbotron" style="padding: 0">
+    <section class="pricing-section">
+    <div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-sm-12">
+				<div class="section-title text-center title-ex1" style="text-align: center">
+					<h2>Choose Plan</h2>
+				</div>
+			</div>
+		</div>
+		<!-- Pricing Table starts -->
+		<div class="row">
+			<div class="col-md-4">
+				<div class="price-card ">
+					<h2 style="">Free</h2>
+                    <p style="font-size: 13px;margin-left: 2px">Per month billing</p>
+					<p class="price" style="text-align: center; font-size: 13px;"><span>$0</span>/ Month</p>
+                    <p style="font-size: 14px;text-align: center">Explore the basic can create sites</p>
+                    <hr>
+					<ul class="pricing-offers" style="font-family: 'BIZ UDGothic', sans-serif;">
+                        <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Buttons features</li>
+                                <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Textual features</li>
+                                <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Basics forms</li>
+                                <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Social icons</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Form Styling</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Navbar Advance Styling</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Footer Advance Styling</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Login templates</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Signup templates</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Contact us templates</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Signup templates</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Images Uploading</li>
+                                <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Card Styling</li>
+					</ul>
+					<button class="btn btn-secondary btn-mid" data-toggle="modal" data-target="#exampleModal">Subscribe</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="price-card featured">
+					<h2>Standard</h2>
+					<p style="font-size: 13px;margin-left: 2px">Per month billing</p>
+					<p class="price" style="text-align: center; font-size: 13px;"><span>$30</span>/ Month</p>
+                    <p style="font-size: 14px;text-align: center">Perfect for creatives and experienced</p>
+                    <hr>
+					<ul class="pricing-offers" style="font-family: 'BIZ UDGothic', sans-serif;">
+                        <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Buttons features</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Textual features</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Basics forms</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i>Social icons</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Form Styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Navbar Advance Styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Footer Advance Styling</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Login templates</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Signup templates</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Contact us templates</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Signup templates</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i>Images Uploading</li>
+                                    <li style="color: #9f5555;font-size: 15px"><i class='bx bx-x'></i> Card Styling</li>
+					</ul>
+					<a href="{% url 'landing-page' value="Standard" %}" class="btn btn-secondary btn-mid" >Subscribe</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="price-card ">
+					<h2>Premium</h2>
+					<p style="font-size: 13px;margin-left: 2px">Per month billing</p>
+					<p class="price" style="text-align: center; font-size: 13px;"><span>$50</span>/ Month</p>
+                    <p style="font-size: 14px;text-align: center">Unlimited access to professional content</p>
+                    <hr>
+					<ul class="pricing-offers" style="font-family: 'BIZ UDGothic', sans-serif;">
+				 <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Buttons styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i>Textual styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Basics forms</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Social icons</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Form Styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Navbar Advance Styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Footer Advance Styling</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Login templates</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Signup templates</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Contact us templates</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Signup templates</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Images Uploading</li>
+                                    <li style="color: #5589b0; font-size: 15px"><i class='bx bx-check'></i> Card Styling</li>
+					</ul>
+					<a href="{% url 'landing-page' value="Premium" %}" class="btn btn-secondary btn-mid" >Subscribe</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{#    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>#}
+{#<a class="btn " id="signin_button" data-toggle="modal" data-target="#modalRegisterForm"  style="float: right"><i class="fas fa-user-plus"></i></a>#}
+    <div class="modal fade bd-example-modal-lg" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold" style="display: flex; justify-content: center; align-items: center">Card Details:</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="modal-body mx-3" style="margin-bottom: 30px ">
+                    <p class="lead container">
+                    Payment info
+                    </p>
+
+                    <div class="md-form mb-3 ">
+                        <label for="inputEmail4" style="margin-left: 12px">Credit Card:</label>
+                        <input type="text" value="" required id="signup-name" style="height: 50px" placeholder="Card number:" class="form-control validate signin_inputs">
+                    </div>
+
+                    <div class="md-form mb-3 ">
+                        <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">Card Holder Name:</label>
+                        <input type="text" value="" required id="signup-email" style="height: 50px" placeholder="Card name" class="form-control validate signin_inputs">
+                    </div>
+                    <div class="md-form mb-3 ">
+                        <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">Expire Date:</label>
+                        <input type="date" value="" required id="signup-email" style="height: 50px" placeholder="Expire Data" class="form-control validate signin_inputs">
+                    </div>
+
+                    <div class="md-form mb-3 ">
+                        <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">Address:</label>
+                        <input type="password" value="" required id="signup-pass" style="height: 50px" placeholder="Address" class="form-control validate signin_inputs">
+                    </div>
+
+                    <div class="md-form mb-3">
+                        <div class="row" style="display: flex">
+                            <div class="col-3" style="padding-left: 17px">
+                                <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">City:</label>
+                                <input type="password" value="" required id="signup-cpass" style="height: 40px;" placeholder="City" class="form-control validate signin_inputs">
+                            </div>
+                            <div class="col-3" style="padding-left: 17px">
+                                <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">State:</label>
+                                <input type="password" value="" required id="signup-cpass" style="height: 40px;" placeholder="State" class="form-control validate signin_inputs">
+                            </div>
+                            <div class="col-3" style="padding-left: 17px">
+                                <label for="inputAddress" style="margin-left: 12px; margin-top: 2%">Zip:</label>
+                                <input type="password" value="" required id="signup-cpass" style="height: 40px;" placeholder="Zip" class="form-control validate signin_inputs">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <a href="{% url 'templates' %}"><button class="btn btn-primary user_actions" id="signin" >Pay now</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Button trigger modal -->
+<!-- Aggrement Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Term and Condition</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                The term and condition will reflect that we will use your created websites as an bussines model. we will sell your developed websites until you upgrade your plan, thanks.
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'templates' %}"><button type="button" class="btn btn-secondary">Continue to free</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        var chart1 = document.getElementById("line-chart").getContext("2d");
+        window.myLine = new Chart(chart1).Line(lineChartData, {
+            responsive: true,
+            scaleLineColor: "rgba(0,0,0,.2)",
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            scaleFontColor: "#c5c7cc"
+        });
+    };
+</script>
+<script src="{% static '/js/jquery-1.11.1.min.js' %}"></script>
+
+{#    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>#}
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
